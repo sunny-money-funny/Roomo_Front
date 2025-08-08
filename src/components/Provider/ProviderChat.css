@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+
+/* 전체 컨테이너 */
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box; 
+    white-space: pre-wrap
+}
+
+/* 왼쪽 영역: 예약 내역 */
+.left-section {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 90%;
+    height: auto;
+}
+
+.separator {
+    width: 100%; 
+    height: 1px; 
+    background-color: #ccc;
+}
+
+.rec-newchat {
+    width: 80%; 
+    height: 40px;  
+    background-color: rgba(74, 98, 138, 0.3);
+    border: 1px solid #000;
+    border-radius: 80px;
+    margin: 20px auto 30px auto;  
+    margin-left: 0;    
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;        
+    font-size: 12px;        
+    font-weight: bold;  
+}
+
+.rec-chat {
+    width: 100%; 
+    height: 40px;
+    background-color: #FFF; 
+    border: 3px solid #fff;
+    border-radius: 80px; 
+    margin: 5px auto;
+    
+    display: flex;              
+    align-items: center;         
+    justify-content: center;     
+    text-align: center;          
+    font-size: 16px;          
+    font-weight: bold;  
+}
+
+.rec-history {
+    width: 100%; 
+    height: 40px;
+    background-color: #FFF; 
+    border: 3px solid #FFF;
+    border-radius: 80px; 
+    margin: 5px auto;
+
+    display: flex;            
+    align-items: center;      
+    justify-content: center;   
+    text-align: center;         
+    font-size: 16px;          
+    font-weight: bold;  
+}
+
+.rec-provider {
+    width: 100%; 
+    height: 40px;
+    background-color: #FFF; 
+    border: 3px solid #FFF;
+    border-radius: 80px; 
+    margin: 5px auto;
+
+    display: flex;            
+    align-items: center;      
+    justify-content: center;   
+    text-align: center;         
+    font-size: 16px;          
+    font-weight: bold;  
+}
+
+
+/* 선택된 버튼에 대한 스타일 */
+.rec-chat.active {
+    border: 3px solid #000; 
+}
+
+.rec-history.active {
+    border: 3px solid #000; 
+}
+
+.rec-provider.active {
+    border: 3px solid #000; 
+}
+.reservation-history {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-history li {
+    padding: 5px 0;
+}
+
+/* 가운데 영역: 챗봇 대화 */
+.center-section {
+    flex: 4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.blank {
+    height: 70px;
+    background-color: transparent;
+}
+
+.chat {
+    background-color:#fff;
+    margin-bottom: 20px;    
+    padding: 10px;
+    height: 70vh; 
+    flex-grow: 1; 
+}
+
+.chat-history {
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    height: calc(100% - 80px); 
+    flex-grow: 1; 
+    max-height: 85%; 
+}
+
+/* 스크롤바 전체 */
+.chat-history::-webkit-scrollbar {
+    width: 5px; /* 스크롤바의 너비 */
+}
+
+/* 스크롤바의 배경 */
+.chat-history::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* 배경 색상 (스크롤이 없는 부분) */
+    border-radius: 5px; /* 둥근 모서리 */
+}
+
+/* 스크롤바 핸들 (잡고 이동하는 부분) */
+.chat-history::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 98, 138, 0.3); /* 파란색 */
+    border-radius: 5px; /* 둥근 모서리 */
+}
+
+/* 스크롤바 핸들에 마우스를 올렸을 때 색상 */
+.chat-history::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 마우스를 올렸을 때 색상 */
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    justify-content: flex-end; 
+    align-self: flex-end;
+    background-color: #e2e2e2; 
+    text-align: right;
+    border-radius: 40px; 
+    max-width: 50%; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    line-height: 1.4; 
+    word-wrap: break-word; 
+}
+
+.chat-message.bot {
+    text-align: left;
+}
+
+.chatbot-logo {
+    width: 30; 
+    height: 30px; 
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.input-container {  
+    margin: 0 auto;
+    display: flex;
+    background-color: #FFF;
+    width : 90%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+input {
+    flex: 1;
+    margin-right: 10px;
+    border: none;
+    background-color: #F8F8F8;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.button img {
+    width: 15px;
+    height: 15px; 
+    object-fit: contain;
+}
+
+button:hover {
+    background-color: #fff;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+
+/* 오른쪽 영역: 예약 가능한 장소 */
+.right-section {
+    flex: 1;
+    padding: 10px;
+    max-height: 100vh;
+    overflow-y: auto; 
+}
+
+.right-section::-webkit-scrollbar {
+    display: none;
+}
+
+.right-section {
+    -ms-overflow-style: none;  /* IE 10+에서 스크롤바 숨기기 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+.places-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.place-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    border: none;
+    border-radius: 20px;
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out forwards; 
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

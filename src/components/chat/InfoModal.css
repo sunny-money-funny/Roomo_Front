@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+
+.modal-overlay {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay button {  
+    z-index: 98;
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.modal-content {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 10px; /* 버튼 사이 간격 */
+    position: relative; /* 버튼 영역을 `relative`로 설정하여 `absolute` 버튼들이 침범하지 않도록 합니다. */
+}
+
+
+/* close button */
+.close button {    
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #e2e2e2;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    bottom: 10px;
+    position: absolute;
+    right: 30px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.close button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.close button:not(:disabled):hover {
+    background-color: black;
+    color:white
+}
+
+.close {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+/* select button */
+
+.selection button{
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: rgba(74, 98, 138, 0.3);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    bottom: 10px;
+    position: absolute;
+    right: 120px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.selection button:not(:disabled):hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+/* 공간 image */
+
+.place-image {
+    background-color: transparent;
+    width: 100%;
+    height: 20%;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+.place-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

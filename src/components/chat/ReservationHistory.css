@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+
+.history-container {
+    background-color:#fff;
+    margin-bottom: 20px;    
+    padding: 10px;
+    height : 80%;
+}
+
+.gray-container {
+    background-color: #F8F8F8;
+    padding: 20px;
+    border-radius: 30px;
+    margin : 2%;
+    overflow-y: auto;
+    height: calc(100% - 80px); 
+}
+
+/* 스크롤바 디자인 */
+.gray-container::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.gray-container::-webkit-scrollbar-thumb {
+    background-color: rgba(74, 98, 138, 0.3); 
+    border-radius: 10px; 
+}
+
+.gray-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+    border-radius: 5px;
+}
+
+.gray-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px; 
+}
+
+.gray-container h2 {
+    margin-bottom: 20px; 
+    text-align: left;
+}
+
+.gray-container p {
+    text-align: center; 
+    color: #666;
+}
+
+.gray-container ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.gray-container li {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff; 
+    border-radius: 20px; 
+    display: flex;
+}
+
+.reservedPlace-image {
+    height: 125px;
+    width: 125px;
+    object-fit: cover;
+    margin-right: 16px;
+    flex-shrink: 0;
+    border-radius: 15px;
+}
+
+.reservedPlace-details {
+    padding: 15px;
+    flex: 1;
+}
+
+.reservedPlace-details p {    
+    text-align: left;
+    margin: 0;
+    padding: 4px 0; 
+}
+
+.reservedPlace-details button {    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.reservationHistory-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    border: none;
+    border-radius: 20px;
+    font-size:12px;
+}
+
+.delete-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

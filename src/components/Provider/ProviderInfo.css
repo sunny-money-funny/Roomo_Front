@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+.space-container {
+    background-color:#fff;
+    margin-bottom: 20px;    
+    padding: 10px;
+    height : 80%;
+    overflow-y: auto; 
+    position: relative;
+}
+
+.space-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* 각 입력 필드 사이 간격 */
+}
+
+/* 각 라벨과 입력을 한 줄에 배치 */
+.space-form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.space-form input, textarea, select {
+    width: 85%; 
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+input[type="number"], select {
+    -moz-appearance: textfield; /* Firefox에서 숫자 입력 시 스핀너 제거 */
+}
+
+.space-container button {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: rgba(74, 98, 138, 0.3);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 70px;
+    max-width: 100px;
+    margin-left: auto; /* 오른쪽으로 정렬 */
+}
+
+.space-container button:not(:disabled):hover {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+
+.rectangle {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로로 정렬 */
+    justify-content: space-between; /* 로고는 상단, 입력창은 하단에 고정 */
+    align-items: center; /* 수평 중앙 정렬 */
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 5%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5vw;
+    z-index: 1;
+}
+
+.logo.box {
+    display: flex;
+    justify-content: center; /* 로고를 수평 중앙 정렬 */
+    align-items: center; /* 로고를 수직 중앙 정렬 */
+    width: 100%; /* 부모 요소의 크기를 전부 채우도록 */
+    height: auto; /* 로고가 기본 크기에 맞게 표시 */
+}
+
+.logoImage {
+    margin-top: 40px;
+    width: 20vw; /* 로고 크기를 반응형으로 설정 */
+    height: 20vw;
+    background: url('./logo.png') no-repeat center center;
+    background-size: cover;
+    z-index: 2; 
+}
+
+/* 프롬프트 바 스타일 */
+.prompt-bar1 {
+    position: relative;
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 0 1vw;
+    margin-bottom: 80px;
+}
+
+.prompt-bar1 input {
+    width: 80%; 
+    height: 100%;
+    border-radius: 2vw;
+    border: none;
+    padding: 0 2vw;
+    font-size: 1.2vw;
+    outline: none;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .rectangle {
+        width: 95%;
+        height: 85%;
+        left: 2.5%;
+        top: 5%;
+        border-radius: 8vw;
+    }
+
+    .prompt-bar1 {
+        width: 85%;
+        height: 12vh;
+        border-radius: 5vw;
+    }
+
+    .prompt-bar1 input {
+        font-size: 2vw;
+        padding: 0 4vw;
+    }
+
+    .logoImage {
+        width: 30vw; /* 작은 화면에서 로고 크기 비율 조정 */
+        height: 30vw;
+        margin-bottom: 10px;
+    }
+}
